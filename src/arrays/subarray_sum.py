@@ -8,10 +8,9 @@ def subarray_sum(nums: list[int], k: int) -> int:
     frequencies = defaultdict(int)
     curr_sum = 0
     count = 0
+    frequencies[0] = 1
     for num in nums:
         curr_sum += num
-        if curr_sum == k:
-            count += 1
         if curr_sum - k in frequencies:
             count += frequencies[curr_sum - k]
         frequencies[curr_sum] += 1
