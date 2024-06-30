@@ -2,7 +2,9 @@
 Given an array of integers nums and a positive integer k, check whether it is possible to divide this array into sets of k consecutive numbers.
 Return true if it is possible. Otherwise, return false.
 """
+
 import collections
+
 
 def is_possible_divide(nums: list[int], k: int) -> bool:
     n = len(nums)
@@ -25,10 +27,10 @@ def is_possible_divide(nums: list[int], k: int) -> bool:
 
 
 def main():
-    nums = [3,2,1,2,3,4,3,4,5,9,10,11]
+    nums = [3, 2, 1, 2, 3, 4, 3, 4, 5, 9, 10, 11]
     k = 3
-    print('Array can be divided in subarrays of', k, is_possible_divide(nums, k))
+    print("Array can be divided in subarrays of", k, is_possible_divide(nums, k))
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

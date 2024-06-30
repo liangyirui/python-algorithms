@@ -3,6 +3,7 @@ Given an integer array nums and an integer k, return the number of non-empty sub
 A subarray is a contiguous part of an array.
 """
 
+
 def subarray_div_by_k(nums: list[int], k: int) -> int:
     remainder = [0] * k
     remainder[0] = 1
@@ -16,10 +17,10 @@ def subarray_div_by_k(nums: list[int], k: int) -> int:
 
 
 def main():
-    nums = [4,5,0,-2,-3,1]
+    nums = [4, 5, 0, -2, -3, 1]
     k = 5
     print(subarray_div_by_k(nums, k))
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

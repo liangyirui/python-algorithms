@@ -21,8 +21,13 @@ def find_order(numCourses: int, prerequisites: list[list[int]]) -> list[int]:
     return order[::-1]
 
 
-
-def dfs(adj: list[list[int]], v: int, order: list[int], marked: list[bool], on_stack: list[bool]) -> bool:
+def dfs(
+    adj: list[list[int]],
+    v: int,
+    order: list[int],
+    marked: list[bool],
+    on_stack: list[bool],
+) -> bool:
     if on_stack[v]:
         return False
     if marked[v]:
@@ -49,7 +54,7 @@ def bfs(numCourses: int, prerequisites: list[list[int]]) -> list[int]:
     for course, degree in enumerate(indegree):
         if degree == 0:
             queue.append(course)
-    
+
     while queue:
         v = queue.popleft()
         order.append(v)

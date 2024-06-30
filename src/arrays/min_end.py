@@ -3,6 +3,7 @@ You are given two integers n and x. You have to construct an array of positive i
 Return the minimum possible value of nums[n - 1].
 """
 
+
 def min_end(n: int, x: int) -> int:
     bit_x = bit_n = 1
     while bit_n < n:
@@ -12,7 +13,6 @@ def min_end(n: int, x: int) -> int:
             bit_n <<= 1
         bit_x <<= 1
     return x
-
 
 
 if __name__ == "__main__":

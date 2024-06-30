@@ -5,6 +5,7 @@ A good subarray is a subarray where:
 2. THe sum of the elenents of the subarray is a multiple of k.
 """
 
+
 def check_subarray_sum(nums: list[int], k: int) -> bool:
     # if a - b is a multiple of k, a % k == b % k
     # use prefix sum and hash table

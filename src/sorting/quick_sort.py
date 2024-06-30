@@ -1,8 +1,10 @@
 import random
 
+
 def quick_sort(arr: list[int]) -> None:
     random.shuffle(arr)
     sort(arr, 0, len(arr) - 1)
+
 
 def sort(arr: list[int], lo: int, hi: int) -> None:
     if lo >= hi:
@@ -10,6 +12,7 @@ def sort(arr: list[int], lo: int, hi: int) -> None:
     mid = partition(arr, lo, hi)
     sort(arr, lo, mid - 1)
     sort(arr, mid + 1, hi)
+
 
 def partition(arr: list[int], lo: int, hi: int) -> int:
     pivot = lo
@@ -34,5 +37,5 @@ def main():
     print(arr)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

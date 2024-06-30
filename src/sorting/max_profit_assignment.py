@@ -7,7 +7,10 @@ For example, if three workers attempt the same job that pays $1, then the total 
 Return the maximum profit we can achieve after assigning the workers to the jobs.
 """
 
-def max_profit_assignment(difficulty: list[int], profit: list[int], worker: list[int]) -> int:
+
+def max_profit_assignment(
+    difficulty: list[int], profit: list[int], worker: list[int]
+) -> int:
     assignment = sorted(zip(difficulty, profit))
     worker.sort()
     n = len(assignment)
@@ -22,7 +25,7 @@ def max_profit_assignment(difficulty: list[int], profit: list[int], worker: list
 
 
 if __name__ == "__main__":
-    difficulty = [2,4,6,8,20]
-    profit = [10,20,30,40,50]
-    worker = [4,5,6,7]
+    difficulty = [2, 4, 6, 8, 20]
+    profit = [10, 20, 30, 40, 50]
+    worker = [4, 5, 6, 7]
     print(f"Maximum profit is {max_profit_assignment(difficulty, profit, worker)}")

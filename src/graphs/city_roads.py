@@ -5,6 +5,7 @@ You need to assign each city with an integer value from 1 to n, where each value
 Return the maximum total importance of all roads possible after assigning the values optimally.
 """
 
+
 def maximum_importance(n: int, roads: list[list[int]]) -> int:
     degrees = [0] * n
     for v, w in roads:
@@ -19,5 +20,5 @@ def maximum_importance(n: int, roads: list[list[int]]) -> int:
 
 if __name__ == "__main__":
     n = 5
-    roads = [[0,1], [1,2], [2,3], [0,2], [1,3], [2,4]]
+    roads = [[0, 1], [1, 2], [2, 3], [0, 2], [1, 3], [2, 4]]
     print(maximum_importance(n, roads))

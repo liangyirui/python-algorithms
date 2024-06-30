@@ -48,7 +48,7 @@ def bfs(n: int, edges: list[list[int]]) -> list[list[int]]:
         for nei in adj[node]:
             ancestors_set_list[nei].add(node)
             ancestors_set_list[nei].update(ancestors_set_list[node])
-    
+
     for v in range(n):
         ancestors_list[v].extend(ancestors_set_list[v])
         ancestors_list[v].sort()
@@ -58,6 +58,6 @@ def bfs(n: int, edges: list[list[int]]) -> list[list[int]]:
 
 if __name__ == "__main__":
     n = 8
-    edges = [[0,3],[0,4],[1,3],[2,4],[2,7],[3,5],[3,6],[3,7],[4,6]]
+    edges = [[0, 3], [0, 4], [1, 3], [2, 4], [2, 7], [3, 5], [3, 6], [3, 7], [4, 6]]
     print(get_ancestors(n, edges))
     print(bfs(n, edges))

@@ -5,12 +5,13 @@ If the current number is odd, you have to add 1 to it.
 It is guaranteed that you can always reach one for all test cases.
 """
 
+
 def num_steps(s: str) -> int:
     n = len(s)
     carry = 0
     steps = 0
     for i in range(n - 1, 0, -1):
-        num = ord(s[i]) - ord('0') + carry
+        num = ord(s[i]) - ord("0") + carry
         if num % 2 == 1:
             steps += 2
             carry = 1

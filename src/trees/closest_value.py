@@ -2,7 +2,6 @@
 Given the root of a binary search tree and a target value, return the value in the BST that is closest to the target.
 If there are multiple answers, print the smallest.
 """
-from typing import Optional
 
 
 class TreeNode:
@@ -11,7 +10,8 @@ class TreeNode:
         self.left = left
         self.right = right
 
-def closest_value(root: Optional[TreeNode], target: float) -> int:
+
+def closest_value(root: TreeNode | None, target: float) -> int:
     node = root
     closest = node.val
     while node:

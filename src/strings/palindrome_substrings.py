@@ -20,11 +20,11 @@ def dfs(s: str, path: list[str], paths: list[list[str]]) -> None:
 
 
 def main():
-    s = 'aabcddb'
+    s = "aabcddb"
     paths = []
     dfs(s, [], paths)
     print(paths)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

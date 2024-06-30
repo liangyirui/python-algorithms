@@ -3,10 +3,13 @@ In English, we have a concept called root, which can be followed by some other w
 Given a dictionary consisting of many roots and a sentence consisting of words separated by spaces, replace all the derivatives in the sentence with the root forming it. If a derivative can be replaced by more than one root, replace it with the root that has the shortest length.
 Return the sentence after the replacement.
 """
+
+
 class TrieNode:
     def __init__(self):
         self.val = False
         self.children = [None] * 256
+
 
 class Trie:
     def __init__(self):
@@ -27,12 +30,12 @@ class Trie:
                 return word
             node = node.children[ord(ch)]
             if node.val:
-                return word[:i + 1]
+                return word[: i + 1]
         return word
 
 
 def replace_words(dictionary, sentence):
-    words = sentence.split(' ')
+    words = sentence.split(" ")
     dict_trie = Trie()
     for word in dictionary:
         dict_trie.insert(word)
@@ -40,14 +43,14 @@ def replace_words(dictionary, sentence):
     for i, word in enumerate(words):
         words[i] = dict_trie.find_shortest(word)
 
-    return ' '.join(words)
+    return " ".join(words)
 
 
 def main():
-    dictionary = ['cat', 'bat', 'rat']
-    sentence = 'the cattle was rattled by the battery'
+    dictionary = ["cat", "bat", "rat"]
+    sentence = "the cattle was rattled by the battery"
     print(replace_words(dictionary, sentence))
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

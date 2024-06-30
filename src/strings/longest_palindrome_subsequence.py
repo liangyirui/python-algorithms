@@ -2,6 +2,8 @@
 Given a string s, find the longest palindromic subsequence's length in s.
 A subsequence is a sequence that can be derived from another sequence by deleting some or no elements without changing the order of the remaining elements.
 """
+
+
 def longest_palindrome_subsequence(s: str) -> int:
     n = len(s)
     memo = {}
@@ -18,10 +20,10 @@ def longest_palindrome_subsequence(s: str) -> int:
         else:
             memo[(lo, hi)] = max(lps(lo + 1, hi), lps(lo, hi - 1))
         return memo[(lo, hi)]
-    
+
     return lps(0, n - 1)
 
 
 if __name__ == "__main__":
-    s = 'bbbab'
+    s = "bbbab"
     print(longest_palindrome_subsequence(s))

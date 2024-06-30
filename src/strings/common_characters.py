@@ -1,7 +1,9 @@
 """
 Given a string array words, return an array of all characters that show up in all strings within the words (including duplicates). You may return the answer in any order.
 """
+
 import collections
+
 
 def common_characters(words: list[str]) -> list[str]:
     n = len(words)
@@ -19,10 +21,10 @@ def common_characters(words: list[str]) -> list[str]:
 
 
 def main():
-    words = ['bella', 'label', 'roller']
+    words = ["bella", "label", "roller"]
     common_chars = common_characters(words)
     print(common_chars)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

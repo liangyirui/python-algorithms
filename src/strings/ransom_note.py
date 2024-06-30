@@ -3,13 +3,14 @@ Given two strings ransomNote and magazine, return true if ransomNote can be cons
 Each letter in magazine can only be used once in ransomNote.
 """
 
+
 def can_construct(ransom_note: str, magazine: str) -> bool:
     str_map: list[int] = [0] * 26
     for ch in magazine:
-        str_map[ord(ch) - ord('a')] += 1
-    
+        str_map[ord(ch) - ord("a")] += 1
+
     for ch in ransom_note:
-        num = ord(ch) - ord('a')
+        num = ord(ch) - ord("a")
         str_map[num] -= 1
         if str_map[num] < 0:
             return False
@@ -17,6 +18,6 @@ def can_construct(ransom_note: str, magazine: str) -> bool:
 
 
 if __name__ == "__main__":
-    ransom_note = 'aa'
-    magazine = 'ab'
+    ransom_note = "aa"
+    magazine = "ab"
     print(can_construct(ransom_note, magazine))

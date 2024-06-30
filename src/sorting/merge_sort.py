@@ -4,6 +4,7 @@ def merge_sort(arr: list[int]) -> list[int]:
     sort(arr, aux, 0, n - 1)
     return arr
 
+
 def sort(arr: list[int], aux: list[int], lo: int, hi: int) -> None:
     if lo >= hi:
         return
@@ -32,12 +33,11 @@ def merge(arr: list[int], aux: list[int], lo: int, mid: int, hi: int) -> None:
             i += 1
 
 
-
 def main():
     nums = [5, 1, 1, 2, 0, 0]
     print(nums)
     print(merge_sort(nums))
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

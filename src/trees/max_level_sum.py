@@ -1,5 +1,5 @@
 from collections import deque
-from typing import Optional
+
 
 class TreeNode:
     def __init__(self, val=0, left=None, right=None):
@@ -8,7 +8,7 @@ class TreeNode:
         self.right = right
 
 
-def max_level_sum_dfs(root: Optional[TreeNode]) -> int:
+def max_level_sum_dfs(root: TreeNode | None) -> int:
     level_sum = []
 
     def dfs(node, level):
@@ -22,7 +22,7 @@ def max_level_sum_dfs(root: Optional[TreeNode]) -> int:
         dfs(node.right, level + 1)
 
     dfs(root, 0)
-    max_level, max_sum = 0, float('-inf')
+    max_level, max_sum = 0, float("-inf")
     for i, val in enumerate(level_sum):
         if val > max_sum:
             max_level = i
@@ -30,11 +30,11 @@ def max_level_sum_dfs(root: Optional[TreeNode]) -> int:
     return max_level
 
 
-def max_level_sum_bfs(root: Optional[TreeNode]) -> int:
+def max_level_sum_bfs(root: TreeNode | None) -> int:
     if root is None:
         return -1
     queue = deque([root])
-    max_level, max_sum = 0, float('-inf')
+    max_level, max_sum = 0, float("-inf")
     level = 0
     while queue:
         size = len(queue)

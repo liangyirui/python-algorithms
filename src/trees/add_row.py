@@ -8,8 +8,6 @@ The adding rule is:
 4. If depth == 1 that means there is no depth depth - 1 at all, then create a tree node with value val as the new root of the whole original tree, and the original tree is the new root's left subtree.
 """
 
-from typing import Optional
-
 
 class TreeNode:
     def __init__(self, val=0, left=None, right=None):
@@ -18,7 +16,7 @@ class TreeNode:
         self.right = right
 
 
-def insert(node: Optional[TreeNode], val: int, d: int, n: int) -> None:
+def insert(node: TreeNode | None, val: int, d: int, n: int) -> None:
     if node is None:
         return
     if d == n - 1:
@@ -33,7 +31,7 @@ def insert(node: Optional[TreeNode], val: int, d: int, n: int) -> None:
         insert(node.right, val, d + 1, n)
 
 
-def addOneRow(root: Optional[TreeNode], val: int, depth: int) -> Optional[TreeNode]:
+def addOneRow(root: TreeNode | None, val: int, depth: int) -> TreeNode | None:
     if depth == 1:
         node = TreeNode(val, left=root)
         return node

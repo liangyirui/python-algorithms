@@ -4,6 +4,7 @@ We will use the integers 0, 1, and 2 to represent the color red, white, and blue
 You must solve this problem without using the library's sort function.
 """
 
+
 def sort_colors(nums: list[int]) -> None:
     n = len(nums)
     lo, hi = 0, n - 1
@@ -20,7 +21,7 @@ def sort_colors(nums: list[int]) -> None:
             i += 1
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     nums = [2, 0, 2, 1, 1, 0]
     print(nums)
     sort_colors(nums)

@@ -1,4 +1,6 @@
-def backtrack(nums: list[int], start: int, path: list[int], paths: list[list[int]]) -> None:
+def backtrack(
+    nums: list[int], start: int, path: list[int], paths: list[list[int]]
+) -> None:
     paths.append(path[:])
     for i in range(start, len(nums)):
         path.append(nums[i])

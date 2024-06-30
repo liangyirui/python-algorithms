@@ -3,8 +3,8 @@ Give the root of a binary tree, return the vertical order traversal of its nodes
 If two nodes are in the same row and column, the order should be from left to right.
 """
 
-from typing import Optional
 from collections import deque, defaultdict
+
 
 class TreeNode:
     def __init__(self, val=0, left=None, right=None):
@@ -13,7 +13,7 @@ class TreeNode:
         self.right = right
 
 
-def vertical_order(root: Optional[TreeNode]) -> list[list[int]]:
+def vertical_order(root: TreeNode | None) -> list[list[int]]:
     if root is None:
         return []
     queue = deque([(root, 0)])
@@ -28,5 +28,5 @@ def vertical_order(root: Optional[TreeNode]) -> list[list[int]]:
             queue.append((node.left, col - 1))
         if node.right:
             queue.append((node.right, col + 1))
-    
+
     return [node_col[x] for x in range(min_col, max_col + 1)]

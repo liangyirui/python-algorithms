@@ -7,6 +7,7 @@ Given an array edges where edges[i] = [typei, ui, vi] represents a bidrectional 
 Return the maximum number of edges you can remove, or return -1 if Alice and Bob cannot fully traverse the graph.
 """
 
+
 class UF:
     def __init__(self, n: int) -> None:
         self.parent = [i for i in range(n)]
@@ -52,5 +53,5 @@ def max_num_edges_to_remove(n: int, edges: list[list[int]]) -> int:
 
 if __name__ == "__main__":
     n = 4
-    edges = [[3,1,2],[3,2,3],[1,1,4],[2,1,4]]
+    edges = [[3, 1, 2], [3, 2, 3], [1, 1, 4], [2, 1, 4]]
     print(max_num_edges_to_remove(n, edges))

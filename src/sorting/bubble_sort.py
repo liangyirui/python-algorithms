@@ -7,10 +7,10 @@ def bubble_sort(arr: list[int]):
 
 
 def main():
-    arr = [5,1,2,3,4]
+    arr = [5, 1, 2, 3, 4]
     bubble_sort(arr)
     print(arr)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

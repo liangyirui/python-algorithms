@@ -4,6 +4,7 @@ palindrome that can be built with those letters.
 Letters are case sensitive, for example, "Aa" is not considered a palindrome.
 """
 
+
 def longest_palindrome(s: str) -> int:
     freq = [0] * 256
     for ch in s:
@@ -17,9 +18,9 @@ def longest_palindrome(s: str) -> int:
 
 
 def main():
-    s = 'abccccdd'
+    s = "abccccdd"
     print(longest_palindrome(s))
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

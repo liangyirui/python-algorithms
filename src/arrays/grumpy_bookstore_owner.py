@@ -6,6 +6,7 @@ The bookstore owner knows a secret technique to keep themselves not grumpy for m
 Return the maximum number of customers that can be satisfied throughout the day.
 """
 
+
 def max_satisfied(customers: list[int], grumpy: list[int], minutes: int) -> int:
     satisfied = dissatisfied = max_dissatisfied = 0
     for i, (customer, owner) in enumerate(zip(customers, grumpy)):
@@ -18,7 +19,7 @@ def max_satisfied(customers: list[int], grumpy: list[int], minutes: int) -> int:
 
 
 if __name__ == "__main__":
-    customers = [1,0,1,2,1,1,7,5]
-    grumpy = [0,1,0,1,0,1,0,1]
+    customers = [1, 0, 1, 2, 1, 1, 7, 5]
+    grumpy = [0, 1, 0, 1, 0, 1, 0, 1]
     minutes = 3
     print(max_satisfied(customers, grumpy, minutes))

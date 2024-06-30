@@ -1,5 +1,4 @@
 class MovingAverage:
-
     def __init__(self, size: int):
         self.queue = [0] * size
         self.size = size
