@@ -3,12 +3,7 @@ Given the root of a binary search tree, return a balanced binary search tree wit
 A binary search tree is balanced if the depth of the two subtrees of every node never differs by more than 1.
 """
 
-
-class TreeNode:
-    def __init__(self, val=0, left=None, right=None) -> None:
-        self.val = val
-        self.left = left
-        self.right = right
+from binary_tree import TreeNode
 
 
 def balance_BST(root: TreeNode | None) -> TreeNode | None:
