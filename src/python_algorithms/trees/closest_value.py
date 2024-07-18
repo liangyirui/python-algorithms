@@ -3,12 +3,7 @@ Given the root of a binary search tree and a target value, return the value in t
 If there are multiple answers, print the smallest.
 """
 
-
-class TreeNode:
-    def __init__(self, val=0, left=None, right=None):
-        self.val = val
-        self.left = left
-        self.right = right
+from binary_tree import TreeNode
 
 
 def closest_value(root: TreeNode | None, target: float) -> int:

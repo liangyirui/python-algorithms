@@ -6,15 +6,7 @@ Construct the binary tree described by descriptions and return its root.
 The test cases will be generated such that the binary tree is valid.
 """
 
-
-class TreeNode:
-    def __init__(self, val=0, left=None, right=None):
-        self.val = val
-        self.left = left
-        self.right = right
-
-    def __repr__(self):
-        return f"{self.val}"
+from binary_tree import TreeNode
 
 
 def create_binary_tree(descriptions: list[list[int]]) -> TreeNode | None:

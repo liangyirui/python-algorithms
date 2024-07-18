@@ -2,12 +2,7 @@
 Given a binary tree, find the lowest common ancestor (LCA) of two given nodes in the tree.
 """
 
-
-class TreeNode:
-    def __init__(self, val):
-        self.val = val
-        self.left = None
-        self.right = None
+from binary_tree import TreeNode
 
 
 def lowest_common_ancestor(root: TreeNode, p: TreeNode, q: TreeNode) -> TreeNode:

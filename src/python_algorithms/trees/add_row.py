@@ -8,12 +8,7 @@ The adding rule is:
 4. If depth == 1 that means there is no depth depth - 1 at all, then create a tree node with value val as the new root of the whole original tree, and the original tree is the new root's left subtree.
 """
 
-
-class TreeNode:
-    def __init__(self, val=0, left=None, right=None):
-        self.val = val
-        self.left = left
-        self.right = right
+from binary_tree import TreeNode
 
 
 def insert(node: TreeNode | None, val: int, d: int, n: int) -> None:
