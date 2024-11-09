@@ -1,0 +1,10 @@
+[project]
+name = "python_algorithms"
+version = "1.0"
+description = "Algorithms implemented in python"
+requires-python = ">=3.10"
+
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
